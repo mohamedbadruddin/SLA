@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/submit" method="get">
+  <table  border="10" cellpadding="10" 
+   style="margin: 0px auto;background-color: rgba(52, 116, 118, 0.466);border-radius: 10px;">
+    <tr>
+        <td colspan="4"><h1 style="text-align: center;">Create Account</h1></td>
+    </tr>
+    <!-- First & Last Name Side-by-Side -->
+    <tr>
+      <td><label for="firstname">First name*</label></td>
+      <td><input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required></td>
+      <td><label for="lastname">Last name*</label></td>
+      <td><input type="text" id="lastname" name="lastname" placeholder="Enter your last name"></td>
+    </tr>
+
+    <!-- Email and Password -->
+    <tr>
+      <td><label for="email">Email*</label></td>
+      <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+      <td><label for="password">Password*</label></td>
+      <td><input type="password" id="password" name="password" placeholder="Enter your password"></td>
+    </tr>
+
+    <!-- Confirm Password (Full Width) -->
+    <tr>
+      <td><label for="Cpassword">Confirm Password*</label></td>
+      <td colspan="3"><input type="password" id="Cpassword" name="Cpassword" placeholder="Re-enter your password" required style="width: 98%"></td>
+    </tr>
+
+    <!-- Gender -->
+    <tr>
+      <td><label>Gender:</label></td>
+      <td colspan="3">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </td>
+    </tr>
+
+    <!-- Hobbies -->
+    <tr>
+      <td><label>Hobbies:</label></td>
+      <td colspan="3">
+        <input type="checkbox" id="music" name="hobbies[]" value="music"><label for="music">Music</label>
+        <input type="checkbox" id="sports" name="hobbies[]" value="sports"><label for="sports">Sports</label>
+        <input type="checkbox" id="travels" name="hobbies[]" value="travel"><label for="travels">Travel</label>
+        <input type="checkbox" id="movies" name="hobbies[]" value="movies"><label for="movies">Movies</label>
+      </td>
+    </tr>
+
+    <!-- Profile Picture and Age -->
+    <tr>
+      <td><label for="picture">Profile Picture</label></td>
+      <td><input type="file" id="picture" name="picture"></td>
+      <td><label for="age">Age</label></td>
+      <td><input type="text" id="age" name="age" placeholder="enter your age"></td>
+    </tr>
+
+    <!-- Income Slider -->
+    <tr>
+      <td><label for="income">Income</label></td>
+      <td colspan="3"><input type="range" id="income" name="income" min="0" max="100" step="10" value="50" style="width: 98%"></td>
+    </tr>
+
+    <!-- Source of Income and Country -->
+    <tr>
+      <td><label for="source">Source of Income</label></td>
+      <td>
+        <select name="source" id="source">
+          <option disabled selected>Select the Option</option>
+          <option value="employed">Employed</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+      </td>
+      <td><label for="country">Country*</label></td>
+      <td>
+        <input type="text" id="country" name="country" list="countryList" placeholder="Select the country" >
+        <datalist id="countryList">
+          <option value="India">
+          <option value="Australia">
+          <option value="United States">
+          <option value="Brazil">
+          <option value="Canada">
+          <option value="Germany">
+          <option value="Japan">
+          <option value="France">
+          <option value="South Africa">
+          <option value="United Kingdom">
+        </datalist>
+      </td>
+    </tr>
+
+    <!-- Bio (Full Row) -->
+    <tr>
+      <td><label for="bio">Bio</label></td>
+      <td colspan="3"><textarea name="bio" id="bio" rows="4" cols="80" style="width: 98%"></textarea></td>
+    </tr>
+
+    <!-- Submit Button -->
+    <tr>
+      <td colspan="4" style="text-align: center;">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+
+  </table>
+</form>
+    
+</body>
+</html>
