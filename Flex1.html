@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing:border-box;
+            overflow: hidden;
+
+        }
+        .container{
+            flex-direction: column;
+            width:100vw;
+            height:100vh;
+            display:flex;
+           justify-content: center;
+           align-items: center;
+           gap: 10px;
+          
+            
+            
+        }
+              .contain{
+            width:30vw;
+            height:80vh;
+            border:5px dashed black;
+            display:flex;
+             gap:40px;
+            align-items:center;
+            flex-wrap:  wrap;
+            justify-content: center;
+            padding:30px 0;
+            
+            
+        }
+        .box{
+              min-width:10px;
+              flex-basis:150px;
+              height:140px;
+              background-color: red;
+              border-radius: 10px;
+        }
+        .purple{
+            background-color: hsl(240, 36%, 83%)
+        }
+        .orange{
+            background-color: hsl(39, 100%, 50%);
+        }
+       
+    </style>
+</head>
+
+<body>
+ 
+    <div class="container">
+           <h1>Flex Box</h1>
+    <div class="contain">
+        <div class="box purple"></div>
+        <div class="box orange"></div>
+        <div class="box orange"></div>
+        <div class="box purple"></div>
+        <div class="box purple"></div>
+        <div class="box orange"></div>
+    </div>
+    </div>
+  
+</body>
+</html>
