@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        button{
+            margin:5px;padding: 10px;
+        }
+        p{
+            margin-right: 5px;font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <table border="1" >
+    <tr>
+        <th>Age</th>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>Baskhar</td>
+    </tr>
+     <tr>
+        <td>20</td>
+        <td>Surjith</td>
+    </tr>
+     <tr>
+        <td>25</td>
+        <td>kanishk</td>
+    </tr>
+     <tr>
+        <td>15</td>
+        <td>ram</td>
+    </tr>
+     <tr>
+        <td>30</td>
+        <td>Badruddin</td>
+    </tr>
+     <tr>
+        <td>35</td>
+        <td>Sharuk khan</td>
+    </tr>
+     <tr>
+        <td>27</td>
+        <td>Faizal</td>
+    </tr>
+     <tr>
+        <td>17</td>
+        <td>Yogi</td>
+    </tr>
+     <tr>
+        <td>28</td>
+        <td>Bala</td>
+    </tr>
+    </table>
+    <button onclick="filter()">Filter</button>
+    
+    <p id="output">Output will be appear here</p>
+    <script>
+        function filter(){
+         let persons=[{age:25 ,name:'Baskhar'},{age:20 ,name:'Surjith'},{age:25 ,name:'kanishk'},{age:15 ,name:'Ram'},{age:25 ,name:'Baskhar'},{age:30 ,name:'Badruddin'},{age:35 ,name:'Sharuk Khan'},{age:27 ,name:'Faizal'},{age:17 ,name:'Yogi'},{age:28 ,name:'Bala'}];
+         let filtered =persons.filter(person => person.age>25).map(p=>p.name).join(', ');
+         document.getElementById('output').innerHTML='Filtered <br>'+filtered;
+         console.log(filtered);
+        }
+
+    </script>
+</body>
+</html>
